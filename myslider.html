@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        .im_left {
+            background-image: url(img/work-1.jpg);
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            left:400px;
+            display: inline-block;
+        }
+        
+        .im_center {
+            background-image: url(img/work-2.jpg);
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            left:710px;
+            display: inline-block;
+        }
+        
+        .im_right {
+            background-image: url(img/work-3.jpg);
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            left:1020px;
+            display: inline-block;
+        }
+        
+        .bt_l {
+            display: inline-block;
+            border: 30px solid transparent;
+            border-right: 40px solid #2266CC;
+            margin-left: 750px;
+            position: absolute;
+            top:400px;
+        }
+        
+        .bt_r {
+            display: inline-block;
+            border: 30px solid transparent;
+            border-left: 40px solid #ff66CC;
+            margin-left: 850px;
+            position: absolute;
+            top:400px;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+
+
+    <div class="im_left" data-tab = "1" ></div>    <div class="im_center" data-tab = "2"></div>    <div class="im_right" data-tab = "3"></div>
+    <br>
+    <div class="bt_l"></div>
+    <div class="bt_r"></div>
+<script src="jquery-3.1.0.min.js"></script>
+<script >
+$(document).ready(function(){ 
+
+// var ImgArr = ['work-1.jpg', 'work-2.jpg', 'work-3.jpg', 'work-4.jpg', 'work-5.jpg', 'work-7.jpg', 'work-6.jpg']; 
+var numb = [1, 2, 3, 4, 5] ;
+
+
+$('.bt_l, [data-tab = 1]').click(function(){
+$('[data-tab = 1]').attr('data-tab', '33');
+$('[data-tab = 2]').attr('data-tab', '1');
+$('[data-tab = 3]').attr('data-tab', '2');
+$('[data-tab = 33]').attr('data-tab', '3');
+
+ $('[data-tab = 1]').animate({
+     'left':  '410px' 
+ });
+  $('[data-tab = 2]').animate({
+     'left':  '720px' 
+ });
+  $('[data-tab = 3]').animate({
+     'left':  '1030px' 
+ });
+
+
+})
+
+
+// вправо
+$('.bt_r, [data-tab = 3]').click(function(){
+$('[data-tab = 3]').attr('data-tab', '33');
+$('[data-tab = 2]').attr('data-tab', '3');
+$('[data-tab = 1]').attr('data-tab', '2');
+$('[data-tab = 33]').attr('data-tab', '1');
+
+ $('[data-tab = 1]').animate({
+     'left':  '410px' 
+ });
+  $('[data-tab = 2]').animate({
+     'left':  '720px' 
+ });
+  $('[data-tab = 3]').animate({
+     'left':  '1030px' 
+ });
+
+
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+})
+</script>
+<script src="main.js"></script>
+</body>
+
+</html>
